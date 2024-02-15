@@ -7,7 +7,7 @@ import{
 function Menu() {
   return (
      <nav 
-          class="menu"
+          className="menu"
           role="navigation"
           aria-label="Main menu"
           itemScope
