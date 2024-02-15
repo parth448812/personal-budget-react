@@ -485,8 +485,10 @@
   
   }
   svg {
-    width: 100%;
+    width: calc(100% + 80px);;
     height: 100%;
+    margin-left: -80px;
+    margin-top: 20px;
   }
   
   path.slice{
@@ -500,10 +502,13 @@
     fill: none;
   }
   #dChart {
-    width: 475px;
+    width: 100%;
     height: 320px;
     margin: auto;
+    
+    
   }
+
   body {
     margin: 0;
     font-family: Arial, sans-serif;
