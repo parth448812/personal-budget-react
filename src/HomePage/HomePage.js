@@ -1,6 +1,100 @@
-import React from 'react';
+// import React from 'react';
+import React, { useEffect, useState } from 'react';
+
+import axios from 'axios';
+import Chart from 'chart.js/auto';
+import * as d3 from "d3";
 
 function HomePage() {
+
+    const dataSource = {
+        labels: [],
+        datasets: [
+            {
+            label: 'My First Dataset',
+            data: [],
+            backgroundColor: [
+                '#8EA604',
+                '#9AC2C9',
+                '#FF6F59',
+                '#1B4079',
+                '#6D5A72',
+                '#3E5641',
+                '#FBB13C'
+        ],
+            hoverOffset: 4
+        }]
+      };
+    const createChart = () => {
+        var ctx = document.getElementById("myChart").getContext("2d");
+        var existingChart = Chart.getChart(ctx);
+        if (existingChart) {
+          existingChart.destroy();
+        }
+        var myPieChart = new Chart(ctx, {
+            type: 'pie',
+            data: dataSource
+        });
+      }
+    
+      const drawD3Chart = () => {
+        const data = dataSource.datasets[0].data; 
+        const labels = dataSource.labels; 
+        const width = 400;
+        const height = 400;
+        const radius = Math.min(width, height) / 2;
+      
+      
+        const svg = d3.select("#dChart")
+          .append("svg")
+          .attr("width", width)
+          .attr("height", height)
+          .append("g")
+          .attr("transform", `translate(${width / 2},${height / 2})`);
+      
+        
+        const pie = d3.pie().value((d) => d);
+      
+        
+        const arcData = pie(data);
+      
+        
+        const arc = d3.arc()
+          .innerRadius(0)
+          .outerRadius(radius);
+      
+        
+        svg.selectAll("path")
+          .data(arcData)
+          .enter()
+          .append("path")
+          .attr("d", arc)
+          .attr("fill", (d, i) => dataSource.datasets[0].backgroundColor[i]);
+      
+        
+        svg.selectAll("text")
+          .data(arcData)
+          .enter()
+          .append("text")
+          .attr("transform", (d) => `translate(${arc.centroid(d)})`)
+          .attr("dy", "0.35em")
+          .attr("text-anchor", "middle")
+          .text((d, i) => labels[i]);
+      };
+    
+      const getBudget = () => {
+        axios.get('/public/budget-data.json').then(function (res) {
+          console.log(res);
+          for (var i = 0; i < res.data.myBudget.length; i++) {
+              dataSource.datasets[0].data[i] = res.data.myBudget[i].budget;
+              dataSource.labels[i] = res.data.myBudget[i].title;
+          }
+          createChart();
+          drawD3Chart();
+      });
+      }
+      getBudget();
+
   return (
     <div id="main-content" class="container center">
 

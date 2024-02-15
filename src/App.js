@@ -1,12 +1,11 @@
 import React from 'react';
-import './App.css';
+//import './App.css';
+import './App.scss';
 
 import{
   BrowserRouter as Router,
-  Switch,
   Route,
   Routes,
-  Link
 } from "react-router-dom";
 
 import Menu from './Menu/Menu';
