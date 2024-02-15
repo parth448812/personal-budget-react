@@ -11,7 +11,7 @@ function HomePage() {
         labels: [],
         datasets: [
             {
-            label: 'My First Dataset',
+            label: '',
             data: [],
             backgroundColor: [
                 '#8EA604',
@@ -40,8 +40,8 @@ function HomePage() {
       const drawD3Chart = () => {
         const data = dataSource.datasets[0].data; 
         const labels = dataSource.labels; 
-        const width = 400;
-        const height = 400;
+        const width = 450;
+        const height = 300;
         const radius = Math.min(width, height) / 2;
       
       
@@ -83,7 +83,7 @@ function HomePage() {
       };
     
       const getBudget = () => {
-        axios.get('/public/budget-data.json').then(function (res) {
+        axios.get('http://localhost:3000/budget-data.json').then(function (res) {
           console.log(res);
           for (var i = 0; i < res.data.myBudget.length; i++) {
               dataSource.datasets[0].data[i] = res.data.myBudget[i].budget;
