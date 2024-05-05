@@ -677,4 +677,30 @@
     margin-bottom: 10px;
   }
   
-    
+  .token-info {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    text-align: center;
+  }
+  
+  .token-info p {
+    margin-bottom: 10px;
+  }
+  
+  .token-info button {
+    padding: 8px 16px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .token-info button:hover {
+    background-color: #0056b3;
+  }

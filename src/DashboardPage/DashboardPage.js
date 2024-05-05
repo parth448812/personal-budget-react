@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import Token from './Token';
 import Chart from 'chart.js/auto';
 import * as d3 from "d3";
 
@@ -212,13 +213,12 @@ function DashboardPage() {
   }
   return (
     <div id="main-content" className="container center">
-
+            <Token/>
         <div className="page-area">
 
-            {/* <button onClick={redirectToBudget}>Make Budget Items</button>
-            <button onClick={getBudget}>Get budget</button> */}
+            
             <div className="text-box">
-                {/* Change the below to have users name.  */}
+                
                 <h1>Hey User!</h1> 
                 <p>
                 Welcome to our personal budget tracking app! Take charge of your finances effortlessly with our intuitive 
