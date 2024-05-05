@@ -11,8 +11,10 @@ import{
 import Menu from './Menu/Menu';
 import Hero from './Hero/Hero';
 import HomePage from './HomePage/HomePage';
-import AboutPage from './AboutPage/AboutPage';
 import LoginPage from './LoginPage/LoginPage';
+import SignupPage from './SignupPage/SignupPage';
+import DashboardPage from './DashboardPage/DashboardPage';
+import ConfigurePage from './ConfigurePage/ConfigurePage';
 import Footer from './Footer/Footer';
 
 function App() {
@@ -37,8 +39,10 @@ function App() {
             </div> */}
       <Routes>
         <Route path='/' element={<HomePage/>} />
-        <Route path='/about' element={<AboutPage/>} />
         <Route path='/login' element={<LoginPage/>} />
+        <Route path='/signup' element={<SignupPage/>} />
+        <Route path='/dashboard' element={<DashboardPage/>} />
+        <Route path='/configure' element={<ConfigurePage/>} />
         
       </Routes>
       <Footer/>

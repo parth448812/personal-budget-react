@@ -2,7 +2,7 @@
     "myBudget": [
         {
             "title": "rent",
-            "budget": 1000
+            "budget": 475
         },
         {
             "title": "grocery",
@@ -18,11 +18,11 @@
         },
         {
             "title": "entertainment",
-            "budget": 50
+            "budget": 210
         },
         {
             "title": "dining",
-            "budget": 125
+            "budget": 175
         },
         {
             "title": "healthcare",
