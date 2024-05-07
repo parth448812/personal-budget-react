@@ -1,0 +1,69 @@
+{
+    "myUser": [
+        {
+            "username": "Alice Smith",
+            "myBudget": [
+                {
+                    "title": "rent",
+                    "budget": 475, 
+                    "color": "#8EA604"
+                },
+                {
+                    "title": "grocery",
+                    "budget": 250, 
+                    "color": "#9AC2C9"
+                },
+                {
+                    "title": "utilities",
+                    "budget": 300, 
+                    "color": "#FF6F59"
+                },
+                {
+                    "title": "transportation",
+                    "budget": 150, 
+                    "color": "#1B4079"
+                },
+                {
+                    "title": "entertainment",
+                    "budget": 210, 
+                    "color": "#6D5A72"
+                },
+                {
+                    "title": "dining",
+                    "budget": 175, 
+                    "color": "#3E5641"
+                },
+                {
+                    "title": "healthcare",
+                    "budget": 350, 
+                    "color": "#8EA604"
+                }
+            ]
+        },
+        {
+            "username": "Bob Jones",
+            "myBudget": [
+                {
+                    "title": "running",
+                    "budget": 500, 
+                    "color": "#8EA604"
+                },
+                {
+                    "title": "games",
+                    "budget": 200, 
+                    "color": "#9AC2C9"
+                },
+                {
+                    "title": "fishing",
+                    "budget": 250, 
+                    "color": "#FF6F59"
+                },
+                {
+                    "title": "gym",
+                    "budget": 300, 
+                    "color": "#1B4079"
+                }
+            ]
+        }
+    ]
+}
