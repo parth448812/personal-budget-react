@@ -27,7 +27,7 @@ function ConfigurePage() {
             budget: budgetAmount,
             color: getColor()
         };
-        await axios.post('http://localhost:3000/addBudget', budgetData);
+        await axios.post('/addBudget', budgetData);
         setBudgetItem('');
         setBudgetAmount('');
     };
