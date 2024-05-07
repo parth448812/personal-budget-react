@@ -12,8 +12,8 @@ function DashboardPage() {
     const [budgetData, setBudgetData] = useState([]);
     const [isd3ChartCreated, setIsd3ChartCreated] = useState(false);
 
-  useEffect(() => {
-    axios.get('http://localhost:3000/user-data.json')
+  useEffect(() => { //https://personal-budget-ylt5a.ondigitalocean.app/user-data.json
+    axios.get('/public/user-data.json') // http://localhost:3000/user-data.json
       .then((res) => {
 
         

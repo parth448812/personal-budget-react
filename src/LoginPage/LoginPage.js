@@ -15,7 +15,7 @@ function LoginPage() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:3000/login', { 
+      const response = await axios.post('/login', { //http://localhost:3000/login
         username,
         password,
       });
